@@ -1,0 +1,235 @@
+/* General Set-up (Fonts, margins, background colors) */
+
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #ffffff;
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-image: radial-gradient(pink, lightblue, lavender);
+    /* YOUR CODE HERE */
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    border: 4px solid #ffffff;
+    transition: ease-in-out 0.3s;
+}
+
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.nobullets {
+    list-style-type: none;
+}
+
+.nobullets li:before
+{
+    content: "";
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ul li:before
+{
+    content: "\2729";
+    margin-right: 5px;    /* any design */
+    font-size: 15px;
+}
+
+
+/* Question 1. Add a hover effect for your h1 tag and img tag! You can change the background-color, color, opacity, or anything you want.*/
+h1:hover {
+    color: rgb(175, 224, 237);
+    background: linear-gradient(90deg, red 50%, rgb(255, 255, 255) 50%) var(--_p, 100%) / 200%,
+      linear-gradient(90deg, rgba(255, 255, 255, 0.683), rgba(230, 230, 250, 0.603)) var(--_c, 0%) / 200% no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.4s;
+    border-radius: 30px;
+    background-color: rgba(184, 232, 250, 0.839);
+    opacity: 90%;
+  }
+  .hover-4:hover {
+    --_p: 50%;
+    --_c: 50%;
+    color: #0000;
+  }
+
+img:hover {
+    background-color: rgba(255, 192, 203, 0.604);
+    border: 20px;
+}
+
+
+
+
+/* Question 2. Add margin, padding, and borders to section tags! */
+section {
+    text-align: center;
+    padding: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    margin: 15px;
+}
+
+
+
+/* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
+
+/* YOUR CODE HERE */
+#education {
+    background-color: rgba(255, 182, 193, 0.292);
+}
+
+#experience {
+    background-color: rgba(209, 209, 255, 0.492);
+}
+
+#projects {
+    background-color: rgba(153, 235, 235, 0.099);
+}
+
+#contact {
+    background-color: rgba(117, 51, 232, 0.082);
+}
+
+
+/* Experience Section */
+
+/* Question 4a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
+
+.experience-wrapper {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+.experience-list-item {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    border: 4px solid #1d355700;
+    text-align: left;
+    width: 250px;
+    padding: 10px 20px;
+    background-color: #a5d2eea5;
+    border-radius: 15px;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.2s transform 0.3s;
+}
+
+.project-wrapper {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.project-list-item {
+    border: 4px solid #1d355700;
+    text-align: left;
+    width: 750px;
+    padding: 10px 20px;
+    background-color: #ffd3db91;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s transform 0.3s;
+}
+
+/* Question 4b. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+.experience-list-item:hover {
+    background-image: radial-gradient(rgba(255, 192, 203, 0.613), rgba(173, 216, 230, 0.585), rgba(230, 230, 250, 0.644));
+    border: 10px;
+    transform: scale(1.05);
+}
+
+.project-list-item:hover {
+    background-image: radial-gradient(rgba(173, 216, 230, 0.585), rgba(230, 230, 250, 0.644), rgba(255, 192, 203, 0.482));
+    border: 10px;
+    transform: scale(1.05);
+}
+
+
+/* Projects Section */
+
+/* Question 5. Use CSS Flexbox or Grid and hover effects for the Projects Section, 
+but use different hover effects from the Experiences section! */
+
+
+
+
+/* Contact Section */
+
+/* Question 6. Make your link pretty! */
+a {
+    color: rgb(143, 116, 253);
+    text-decoration: none;
+}
+
+a {
+    background:
+      linear-gradient(
+        to right,
+        rgba(143, 116, 253, 0.583),
+        rgba(143, 116, 253, 0.547),
+        rgba(143, 116, 253, 0.474)
+      ),
+      linear-gradient(
+        to right,
+        lightblue,
+        lavender,
+        pink
+        
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.header {
+    display: flex; /* use flexbox to align images in a row */
+    flex-wrap: nowrap; /* allow images to wrap to a new line if there's not enough space */
+    justify-content: center; 
+  }
+
+.header img {
+    width: 100%; /* make images take up full width of container */
+    max-width: 200px; /* set a maximum width for larger screens */
+    margin: 10px; /* add some spacing between images */
+  }
+  
+
+/* Question 7. Let's make this a little more mobile-friendly! Use a media query/breakpoint to make
+project-list-item and experience-list-item divs have a width of 100% for smaller devices.*/
+
+/* Small devices (portrait tablets and large phones, 600px screen and up) */
+@media only screen and (max-width: 600px) {
+    .project-list-item, .experience-list-item, .header, .header img {
+        width: 100%;
+      }
+}
